@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+      /*HEADER*/
+.head {
+  min-height: 210px;
+  padding: 1px;
+  background: #0081B0;
+  position: relative;
+  color: #DFE9F1;
+  vertical-align: bottom;
+}
+.head a, .common a, .side a, .gauge a, .button a {
+  text-decoration: none;
+  color: inherit;
+}
+.head .menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+.molletLogo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+.head .plazvakLogo {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.head .plazvakLogo p {
+  margin: 0px auto 5px;
+}
+.head .menu>li:first-child, .head .menusub {
+  display: none;
+}
+.head .menu>li, .exposeMenu {
+  list-style: none;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  width: 130px;
+  height: 50px;
+  box-sizing: border-box;
+  transition: .3s;
+  border: 1px solid #DFE9F1;
+  border-radius: 5px;
+}
+.head .menu>li:hover {
+  background: #E31E24;
+  border: 1px solid #E31E24;
+  cursor: pointer;
+}
+.head .menu>li.active {
+  background: #DFE9F1;
+  border: 1px solid #DFE9F1;
+  color: #0081B0;
+  cursor: pointer;
+}
+      /*MAIN CONTENT*/
+.main-content {
+  background: #DFE9F1 url("img/logo/helix.png") no-repeat center;
+  padding: 1px 20px;
+  color: #152D40;
+}
+.main-content h2, h3 {
+  font-family: 'PT Serif Caption', serif;
+}
+      /*DESCRIPTION*/
+.description {
+  width: 60%;
+  margin: 50px 10px;
+}
+.description span {
+  font-weight: bold;
+}
+.description table {
+  border-collapse: collapse;
+}
+.description table .main {
+  width: 400px;
+  font-weight: bold;
+}
+.description tr {
+  border-bottom: 1px solid #152D40;
+  height: 30px;
+}
+.leftalign {
+  padding: 0px 15px;
+  text-align: left;
+}
+.ex {
+  margin: 10px auto 20px;
+  border-top: 1px solid #152D40;
+  border-bottom: 1px solid #152D40;
+}
+.ex img {
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.ex div {
+  width: 75%;
+  display: inline-block;
+}
+      /*ANIMATION*/
+.wrapper {
+  display: block;
+  float: right;
+  margin: 10px auto;
+  width: 30%;
+  height: 415px;
+  position: relative;
+}
+.wrapper img {
+  display: block;
+  position: absolute;
+  /*max-width: 100%;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  cursor: pointer;
+}
+#i1 {
+  opacity: 1;
+  animation: change1 20s infinite;
+}
+#i2 {
+  animation: change2 20s infinite;
+}
+#i3 {
+  animation: change3 20s infinite;
+}
+#i4 {
+  animation: change4 20s infinite;
+}
+#i5 {
+  animation: change5 20s infinite;
+}
+@keyframes change1 {
+  15% {opacity: 1;}
+  20% {opacity: 0;}
+  95% {opacity: 0;}
+}
+@keyframes change2 {
+  15% {opacity: 0;}
+  20% {opacity: 1;}
+  35% {opacity: 1;}
+  40% {opacity: 0;}
+}
+@keyframes change3 {
+  35% {opacity: 0;}
+  40% {opacity: 1;}
+  55% {opacity: 1;}
+  60% {opacity: 0;}
+}
+@keyframes change4 {
+  55% {opacity: 0;}
+  60% {opacity: 1;}
+  75% {opacity: 1;}
+  80% {opacity: 0;}
+}
+@keyframes change5 {
+  75% {opacity: 0;}
+  80% {opacity: 1;}
+  95% {opacity: 1;}
+  100% {opacity: 0;}
+}
+      /*COMMON*/
+.common {
+  margin: 50px auto;
+  width: 100%;
+  text-align: center;
+}
+.common ul {
+  margin: 0;
+  padding: 0;
+}
+.common li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+  transition: .2s;
+  cursor: pointer;
+}
+      /*APPLICATION*/
+.application li {
+  opacity: 0.7;
+}
+.application li:hover {
+  opacity: 1;
+}
+      /*PARTNERSHIP*/
+.partnership {
+  margin: 50px 10px;
+  text-align: center;
+}
+.partnership div {
+  text-align: left;
+}
+.partnership img {
+  transform: scale(.7);
+}
+      /*PRODUCTS*/
+.products li {
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.products .img_box {
+  width: 280px;
+  height: 280px;
+}
+.img_box img {
+  height: 270px;
+}
+.products li:hover {
+  border: 1px solid #152D40;
+}
+.side, .gauge {
+  float: right;
+  width: 30%;
+}
+.side {
+  margin: 50px auto;
+}
+.gauge {
+  margin: 0px auto;
+}
+.side img {
+  width: 100%;
+}
+.gauge img {
+  display: block;
+  height: 350px;
+  margin: 0 auto;
+}
+.side ul, .gauge ul {
+  margin: -4px 0 0;
+  padding: 0;
+}
+.side li, .gauge li {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-bottom: 1px solid #152D40;
+  border-left: 1px solid #152D40;
+  border-right: 1px solid #152D40;
+  transition: .2s;
+}
+.gauge li {
+  border-top: 1px solid #152D40;
+  margin-top: 1px;
+}
+.gauge li:first-child {
+  border-top: 1px solid #152D40;
+}
+.side li:hover, .side li.active, .gauge li:hover, .gauge li.active, .button:hover {
+  background: #152D40;
+  color: #DFE9F1;
+}
+.examples li{
+  list-style: none;
+  display: block;
+  width: 100%;
+}
+.center {
+  margin-top: 30px;
+  text-align: center;
+}
+.button {
+  width: 150px;
+  height: 40px;
+  margin: 50px 0px 0px 0px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #152D40;
+  border-radius: 5px;
+  transition: .2s
+}
+.submenu {
+  margin-top: 0!important;
+}
+.submenu li {
+  border: none;
+  border-radius: 0;
+  width: 90%;
+  margin: 0px auto;
+  color: #0081B0;
+  transition: .2s;
+}
+.submenu li:first-child {
+  border-top: none;
+}
+.submenu li:hover, .submenu .now {
+  background: #0081B0;
+  color: #DFE9F1;
+  font-weight: bold;
+}
+.pictures {
+  max-width: 500px;
+  margin: 0 auto;
+}
+      /*FOOTER*/
+footer {
+  min-height: 160px;
+  background: #152D40;
+  padding: 1px;
+  position: relative;
+  color: #DFE9F1;
+}
+footer a {
+  color: #DFE9F1;
+}
+footer .left {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+footer .plazvakLogo {
+  transform-origin: left top;
+  transform: scale(.8);
+  margin-top: 8px;
+}
+footer .left p {
+  margin-top: 15px;
+}
+footer .right {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+footer p {
+  margin: 5px auto;
+}
+@media screen and (max-width:840px) {
+  .head .menu li {
+    font-size: 16px;
+    width: 120px;
+  }
+  footer .left {
+    left: 20px;
+  }
+  footer .right {
+    right: 20px;
+  }
+}
+@media screen and (max-width:780px) {
+  .head {
+    min-height: 330px;
+  }
+  .molletLogo {
+    position: static;
+    margin: 20px;
+  }
+  .head .plazvakLogo {
+    position: static;
+    margin: 90px 20px 0px;
+    text-align: left;
+  }
+  .head .menu li {
+    display: block;
+    width: 130px;
+    font-size: 18px;
+  }
+  .side, .gauge {
+    width: 217px;
+  }
+}
+@media screen and (max-width:695px) {
+  .description {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .wrapper {
+    float: none;
+    width: 100%;
+  }
+  .main-content h2 {
+    margin-bottom: 30px;
+  }
+  .side, .gauge {
+    float: none;
+    width: 80%;
+  }
+  .gauge img {
+    float: left;
+  }
+  .gauge>ul {
+    width: 217px;
+    margin-left: 60%;
+  }
+}
+@media screen and (max-width:600px) {
+  .molletLogo {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+  }
+  .head .plazvakLogo {
+    max-width: 100%;
+    margin: 60px auto 20px;
+    text-align: center;
+  }
+  .head .menu {
+    position: absolute;
+    top: 85%;
+    right: 20px;
+    z-index: 100;
+  }
+  .head .menu>li:hover {
+    background: #DFE9F1;
+    border: 1px solid #DFE9F1;
+    color: #0081B0;
+    cursor: pointer;
+  }
+  .head .menu>li:first-child {
+    display: block;
+  }
+  .head .menu>li:first-child:hover .menusub {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .head .menusub>li {
+    list-style: none;
+    display: block;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    box-sizing: border-box;
+    transition: .3s;
+    border: 1px solid #DFE9F1;
+    border-radius: 5px;
+    background: #0081B0;
+    color: #fff;
+  }
+  .head .menusub>li:hover {
+    border: 1px solid #E31E24;
+    background: #E31E24;
+  }
+  .head .menu>li:nth-child(n+2) {
+    display: none;
+  }
+  .side, .gauge {
+    width: 217px;
+  }
+  .gauge img {
+    float: none;
+  }
+  .gauge>ul {
+    margin-left: 0;
+  }
+  footer .left, footer .right {
+    position: static;
+    text-align: center;
+    margin: 20px;
+  }
+  footer .left p {
+    margin-top: 0px;
+  }
+  footer .plazvakLogo {
+    transform-origin: center;
+}
