@@ -242,8 +242,9 @@ body {
 }
 .gauge img {
   display: block;
-  height: 350px;
+  max-height: 350px;
   margin: 0 auto;
+  max-width: 100%;
 }
 .side ul, .gauge ul {
   margin: -4px 0 0;
