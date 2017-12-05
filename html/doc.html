@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOLLET</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div class="content">
+    <header class="head">
+      <img class="molletLogo" src="../img/logo/Mollet logo.png" alt="Mollet logo">
+      <div class="plazvakLogo">
+        <p>Официальный представитель в России</p>
+        <img src="../img/logo/Plazvak logo.png" alt="Plazvak logo">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li>Меню
+            <ul class="menusub">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="products.html">Продукция</a></li>
+              <li><a href="chemistry.html">Применение</a></li>
+              <li><a href="doc.html">Документация</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="company.html">О компании</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="products.html">Продукция</a></li>
+          <li><a href="chemistry.html">Применение</a></li>
+          <li class="active"><a href="doc.html">Документация</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="company.html">О компании</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="app" class="main-content">
+        <h3 class="lower">Для более полной информации мы предлагаем ознакомиться с техническими каталогами по интересующим Вас измерительным приборам.</h3>
+        <div class="side">
+          <img v-bind:src="setImg" alt="">
+        </div>
+        <article class="description">
+          <p>Выберите оборудование: </p>
+          <select v-model="selectedGroup">
+              <option v-for="product in products" v-bind:value="product.name">{{product.name}}</option>
+          </select>
+          <article v-show="selectedGroup === 'MOLOSroto'">
+            <ul>
+              <li v-for="item in products[0].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <article v-show="selectedGroup === 'MOLOSvibro'">
+            <ul>
+              <li v-for="item in products[1].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <article v-show="selectedGroup === 'MOLOSmembran'">
+            <ul>
+              <li v-for="item in products[2].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <article v-show="selectedGroup === 'MOLOSpendu'">
+            <ul>
+              <li v-for="item in products[3].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <article v-show="selectedGroup === 'MOLOSwave'">
+            <ul>
+              <li v-for="item in products[4].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <article v-show="selectedGroup === 'MOLOSbob'">
+            <ul>
+              <li v-for="item in products[5].info"><a target="blank" v-bind:href="item.link">{{item.text}}</a></li>
+            </ul>
+          </article>
+          <p>По всем вопросам приобретения и дополнительной информации о продукции Вы можете связаться с нами</p>
+          <div class="button"><a href="contacts.html">Наши контакты</a></div>
+        </article>
+      </section>
+        <footer>
+          <div class="left">
+            <img class="plazvakLogo" src="../img/logo/Plazvak logo.png" alt="Plazvak logo">
+            <p><a href="http://plazvak.ru/">plazvak.ru</a></p>
+          </div>
+          <div class="right">
+        <p>НТППК «ПЛАЗВАК»</p>
+        <p>109428, Россия, Москва</p>
+        <p>ул. Стахановская, д.20, стр.11, офис 2</p>
+        <p>Тел./Факс: +7 (495) 730-48-17</p>
+        <p>E-mail: <a href="mailto:info@kuebler-rus.ru">info@kuebler-rus.ru</a></p>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
