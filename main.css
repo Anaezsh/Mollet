@@ -387,6 +387,15 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
+.map {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 400px
+}
+.map_logo {
+  width: 136px;
+  height: 20px;
+}
       /*FOOTER*/
 footer {
   min-height: 160px;
